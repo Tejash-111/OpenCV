@@ -10,7 +10,7 @@ cap = cv2.VideoCapture("resources/test1.mp4")
 # to display video as a set of images.
 while True:
     success, img2 = cap.read()
-    cv2.imshow
+    cv2.imshow("Video", img2)
     # exit the video when "q" is pressed.
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
