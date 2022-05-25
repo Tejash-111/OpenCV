@@ -42,9 +42,9 @@ def stackImages(scale,imgArray):
     return ver
 
   
-  
-
-imgStack = stackImages(0.25, ([img, img, img]))
+# for inserting an image of different color in between
+imgGray = cv2.cvtColor(img, cv2.COLOR_BGRA2GRAY)
+imgStack = stackImages(0.25, ([img, img, img], [img, imgGray, img]))
 
 cv2.imshow("ImageStack", imgStack)
 
